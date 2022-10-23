@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <style>
+            body{
+                text-align: center;
+                padding: 10px;
+                text-align: justify;
+            }
+            #heading{
+                font-size: 4em;
+                text-align: center;
+            }
+            #para{
+                font-size: 1.3rem;
+            }
+            #text{
+                font-size: 3rem;
+                text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+            }
+            #container{
+                display: flex;
+                /* display: inline-block; */
+                flex-direction: row;
+                margin: 0%;
+                position: absolute;
+                right: 5%;
+                bottom: 5%;
+            }
+            #box{
+                width: 200px;
+                height: 100px;
+                /* border: 5px solid rgb(70, 70, 70); */
+                background-color: rgb(177, 177, 177);
+                border-radius: 60px;
+                margin: 1.3em;
+            }
+            #ball{
+                width: 100px;
+                height: 100px;
+                background-color: rgb(238, 238, 238);
+                border: 1px solid rgb(187, 187, 187);
+                border-radius: 50px;
+            }
+            #btn{
+                width: 100px;
+                height: 100px;
+                opacity: 0%;
+            }
+            .giveLeftMargin{
+                margin-left: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">This is a web page.</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quam praesentium dolorem nisi sed sapiente fugit assumenda odit eligendi temporibus, error sint facere quibusdam optio fuga non voluptas ipsa maiores repudiandae aperiam corporis facilis repellat? Laborum quae tenetur sapiente sequi quia, nemo recusandae dolore perspiciatis sunt hic in, doloremque quis illum. Perspiciatis, veritatis animi. Optio voluptates eos corrupti blanditiis illum? Nemo in illo voluptatem molestiae quos temporibus velit dolor commodi provident, ipsum neque earum fuga, aut nostrum nisi nesciunt ipsa itaque amet! Quasi eius voluptatem magni quod nam. Ut incidunt autem suscipit accusantium? Laudantium ut explicabo quo fugit quod sed illum soluta dolores provident nobis reiciendis ipsam voluptatibus accusamus deserunt atque, alias aliquam libero. Distinctio error sed incidunt asperiores voluptatibus veniam, nobis ex sapiente accusamus eaque ut eum ab doloremque aliquid libero quo quasi autem minus soluta. Fugit est quae earum ducimus totam numquam! Voluptates alias animi est expedita vel, exercitationem deleniti tempore non, dolor laboriosam nesciunt vero, quaerat corrupti quae omnis esse saepe consectetur unde. Similique delectus porro aut numquam molestiae voluptate magnam, ab, accusantium fugiat exercitationem praesentium reprehenderit fuga aspernatur? Est, tempore, architecto dolor odio non porro consequuntur laborum adipisci enim facilis dolorum accusamus provident, vero ex itaque!</p>
+        <div id="container">
+            <h2 id="text">
+                moonLight:
+            </h2>
+            <div id="box">
+                <div id="ball">
+                    <button id="btn"></button>
+                </div>
+            </div>
+        </div>
+        <script>
+            let btnOn = false;
+            const buton = document.querySelector('#btn');
+            const box = document.querySelector('#box');
+            const ball = document.querySelector('#ball');
+            const body = document.querySelector('body');
+            
+            const dayLight = () =>{
+                body.style.background = 'white';
+                body.style.color = 'black';
+            }
+            const moonLight = () =>{
+                body.style.background = 'black';
+                body.style.color = 'white';
+            }
+
+            box.onclick = function onOff() {
+               if(!btnOn){
+                box.style.background = 'blue';
+               ball.classList.add('giveLeftMargin');
+               btnOn = true;
+               moonLight();
+               }
+               else{
+                box.style.background = 'rgb(177, 177, 177)';
+               ball.classList.remove('giveLeftMargin');
+               btnOn = false;
+               dayLight();
+               }
+            }
+        </script>
+    </body>
+</html>

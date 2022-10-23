@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <audio src="audio/1first.mp3" id="audio1"></audio>
+    <audio src="audio/2second.mp3" id="audio2"></audio>
+    <audio src="audio/3third.mp3" id="audio3"></audio>
+    <audio src="audio/4fourth.mp3" id="audio4"></audio>
+    <script>
+        audio1 = document.querySelector("#audio1");
+        audio2 = document.querySelector("#audio2");
+        audio3 = document.querySelector("#audio3");
+        audio4 = document.querySelector("#audio4");
+        document.addEventListener('keydown', function(event) {
+            const keyno = event.keyCode;
+            switch (keyno) {
+                case 65:
+                    console.log("a");
+                    audio1.play();
+                    break;
+                case 83:
+                        console.log("s");
+                        audio2.play();
+                    break;
+                case 68:
+                    console.log("d");
+                    audio3.play();
+                    break;
+                case 70:
+                    console.log("f");
+                    audio4.play();
+                    break;
+                case 71:
+                    console.log("g");
+                    break;
+                case 72:
+                    console.log("h");
+                    break;
+                case 74:
+                    console.log("j");
+                    break;
+                case 75:
+                    console.log("k");
+                    break;
+                case 76:
+                    console.log("l");
+                    break;
+            
+                default:
+                    break;
+            }
+            if(event.keyCode == 32){
+                audio1.pause();
+                audio2.pause();
+                audio3.pause();
+                audio4.pause();
+                console.log('pause');
+            }
+            console.log(event.keyCode);
+        });
+    </script>
+</body>
+</html>
+
+<!-- 
+
+    document.addEventListener('keydown', function(event) {
+        if(event.keyCode == 37) {
+            alert('Left was pressed');
+        }
+        else if(event.keyCode == 39) {
+            console.log('right was pressed');
+        }
+    });
+-->
+<!-- 65
+piano.html:15 83
+piano.html:15 68
+piano.html:15 70
+piano.html:15 71
+piano.html:15 72
+piano.html:15 74
+piano.html:15 75
+piano.html:15 76 -->

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            margin: 0px;
+            padding: 0px;
+            /* box-sizing: border-box; */
+            background-image: 
+            linear-gradient(90deg,  rgb(252, 255, 229) ,rgb(250, 242, 227));
+            background-repeat: no-repeat;
+            background-size:cover;
+            display: flex;
+            justify-content: center;
+            vertical-align:middle;
+            align-items: center;
+        }
+        #box{
+            width: 300px;
+            height: 180px;
+            background-color: white;
+            /* border: 1px solid wheat; */
+            border-radius: 25px;
+            text-align: center;
+            padding: 10px;
+        }
+        #container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .btns{
+            background-color: wheat;
+            border: 2px solid gray;
+            border-radius: 5px;
+            width: 80px;
+            height: 20px;
+            user-select: none;
+        }
+        .btns:hover{
+            cursor: pointer;
+        }.btns:active{
+            width: 78px;
+            height: 19px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2 id="heading">Counter</h2>
+        <h1 id="number">0</h1>
+        <div id="container">
+            <div class="btns" id="btn1">Decrease</div>
+            <div class="btns" id="btn2">Reset</div>
+            <div class="btns" id="btn3">Increase</div>
+        </div>
+    </div>
+    <script src="counter.js"></script>
+</body>
+</html>

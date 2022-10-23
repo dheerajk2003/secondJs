@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(3, 25, 34);
+            display: flex;
+            justify-content: center;
+            /* vertical-align: middle; */
+            align-items: center;
+            /* background-image: radial-gradient( white -49%, black 25% ); */
+        }
+        #timeText{
+            color: white;
+            font-size: 3rem;
+            text-shadow: 0px 0px 1.4rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="timeText">00</h1>
+    <script>
+        setInterval(setTime, 1000);
+        function setTime()
+        {
+            let time = new Date();
+            let hours = time.getHours();
+            let minutes = time.getMinutes();
+            let seconds = time.getSeconds();
+            let text = document.querySelector('#timeText');
+            let am_pm = "am";
+
+            if(hours > 12){
+                hours-=12;
+                am_pm="pm";
+            }
+
+            hours = hours < 10 ? "0"+hours : hours;
+            minutes = minutes < 10 ? "0"+minutes : minutes;
+            seconds = seconds < 10 ? "0"+seconds : seconds;
+            console.log(`${hours} : ${minutes} : ${seconds} : ${am_pm}`);
+
+            text.innerHTML = `${hours}:${minutes}:${seconds}:${am_pm}`;
+        }    
+        setTime();
+    </script>
+</body>
+</html>
