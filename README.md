@@ -1,0 +1,2 @@
+# secondJs
+js beginners stuff
