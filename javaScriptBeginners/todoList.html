@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #AAC4FF;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            vertical-align: middle;
+            justify-content: center;
+        }
+        #container{
+            height: 50vh;
+            width: 30vw;
+            background-color: #D2DAFF;
+            border-radius: 15px;
+        }
+        #box1{
+            height: 5rem;
+            /* background-color: wheat; */
+            border-radius: 15px 15px 0px 0px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px;
+        }
+        #text{
+            border: 0px;
+            border-radius: 5px;
+            height: 2rem;
+            width: 70%;
+        }
+        #btn{
+            border: 0px;
+            border-radius: 5px;
+            height: 2rem;
+            width: 4rem;
+            background-color: rgb(42 107 255);
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+        }
+        #box2{
+            background-color: #e9f3ff;
+            height: 38vh;
+            border-radius: 15px;
+        }
+        #list{
+            box-sizing: border-box;
+            padding: 20px;
+            overflow: auto;
+        }
+        .items{
+            text-decoration: none;
+            list-style: none;
+            text-align: left;
+            margin: 5px;
+            margin-left: 10px;
+            font-size: 1.1rem;
+            font-weight: 200;
+            color: rgb(68, 68, 68);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="innerBox" id="box1">
+            <input type="text" id="text">
+            <button id="btn">Add</button>
+        </div>
+        <div class="innerBox" id="box2">
+            <ul id="list">
+                
+            </ul>
+        </div>
+    </div>
+    <script src="todoList.js"></script>
+</body>
+</html>
